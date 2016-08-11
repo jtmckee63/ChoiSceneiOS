@@ -24,6 +24,7 @@
 		1B7180F71D5BE8C60046BB03 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7180ED1D5BE8C60046BB03 /* FBSDKCoreKit.framework */; };
 		1B7180F81D5BE8C60046BB03 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7180EE1D5BE8C60046BB03 /* FBSDKLoginKit.framework */; };
 		1B7180F91D5BE8C60046BB03 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7180EF1D5BE8C60046BB03 /* FBSDKShareKit.framework */; };
+		1B7181011D5BF7110046BB03 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7181001D5BF7110046BB03 /* ChoiceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,17 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B7180B51D5BE8440046BB03 /* ChoiceScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoiceScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B7180B51D5BE8440046BB03 /* ChoiScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoiScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7180B81D5BE8440046BB03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B7180BA1D5BE8440046BB03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B7180BD1D5BE8440046BB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B7180BF1D5BE8440046BB03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B7180C21D5BE8440046BB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B7180C41D5BE8440046BB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B7180C91D5BE8440046BB03 /* ChoiceSceneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChoiceSceneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B7180C91D5BE8440046BB03 /* ChoiScene.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChoiScene.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7180CD1D5BE8440046BB03 /* ChoiceSceneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceSceneTests.swift; sourceTree = "<group>"; };
 		1B7180CF1D5BE8440046BB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B7180D41D5BE8440046BB03 /* ChoiceSceneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChoiceSceneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B7180D41D5BE8440046BB03 /* ChoiScene.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChoiScene.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7180D81D5BE8440046BB03 /* ChoiceSceneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceSceneUITests.swift; sourceTree = "<group>"; };
 		1B7180DA1D5BE8440046BB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B7180E61D5BE8C60046BB03 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		1B7180ED1D5BE8C60046BB03 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1B7180EE1D5BE8C60046BB03 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1B7180EF1D5BE8C60046BB03 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		1B7181001D5BF7110046BB03 /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +117,9 @@
 		1B7180B61D5BE8440046BB03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B7180B51D5BE8440046BB03 /* ChoiceScene.app */,
-				1B7180C91D5BE8440046BB03 /* ChoiceSceneTests.xctest */,
-				1B7180D41D5BE8440046BB03 /* ChoiceSceneUITests.xctest */,
+				1B7180B51D5BE8440046BB03 /* ChoiScene.app */,
+				1B7180C91D5BE8440046BB03 /* ChoiScene.xctest */,
+				1B7180D41D5BE8440046BB03 /* ChoiScene.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +129,7 @@
 			children = (
 				1B7180B81D5BE8440046BB03 /* AppDelegate.swift */,
 				1B7180BA1D5BE8440046BB03 /* ViewController.swift */,
+				1B7181001D5BF7110046BB03 /* ChoiceViewController.swift */,
 				1B7180BC1D5BE8440046BB03 /* Main.storyboard */,
 				1B7180BF1D5BE8440046BB03 /* Assets.xcassets */,
 				1B7180C11D5BE8440046BB03 /* LaunchScreen.storyboard */,
@@ -166,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1B7180B41D5BE8440046BB03 /* ChoiceScene */ = {
+		1B7180B41D5BE8440046BB03 /* ChoiScene */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B7180DD1D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiceScene" */;
+			buildConfigurationList = 1B7180DD1D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiScene" */;
 			buildPhases = (
 				1B7180B11D5BE8440046BB03 /* Sources */,
 				1B7180B21D5BE8440046BB03 /* Frameworks */,
@@ -178,14 +181,14 @@
 			);
 			dependencies = (
 			);
-			name = ChoiceScene;
+			name = ChoiScene;
 			productName = ChoiceScene;
-			productReference = 1B7180B51D5BE8440046BB03 /* ChoiceScene.app */;
+			productReference = 1B7180B51D5BE8440046BB03 /* ChoiScene.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1B7180C81D5BE8440046BB03 /* ChoiceSceneTests */ = {
+		1B7180C81D5BE8440046BB03 /* ChoiSceneTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B7180E01D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiceSceneTests" */;
+			buildConfigurationList = 1B7180E01D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiSceneTests" */;
 			buildPhases = (
 				1B7180C51D5BE8440046BB03 /* Sources */,
 				1B7180C61D5BE8440046BB03 /* Frameworks */,
@@ -196,14 +199,14 @@
 			dependencies = (
 				1B7180CB1D5BE8440046BB03 /* PBXTargetDependency */,
 			);
-			name = ChoiceSceneTests;
+			name = ChoiSceneTests;
 			productName = ChoiceSceneTests;
-			productReference = 1B7180C91D5BE8440046BB03 /* ChoiceSceneTests.xctest */;
+			productReference = 1B7180C91D5BE8440046BB03 /* ChoiScene.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1B7180D31D5BE8440046BB03 /* ChoiceSceneUITests */ = {
+		1B7180D31D5BE8440046BB03 /* ChoiSceneUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B7180E31D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiceSceneUITests" */;
+			buildConfigurationList = 1B7180E31D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiSceneUITests" */;
 			buildPhases = (
 				1B7180D01D5BE8440046BB03 /* Sources */,
 				1B7180D11D5BE8440046BB03 /* Frameworks */,
@@ -214,9 +217,9 @@
 			dependencies = (
 				1B7180D61D5BE8440046BB03 /* PBXTargetDependency */,
 			);
-			name = ChoiceSceneUITests;
+			name = ChoiSceneUITests;
 			productName = ChoiceSceneUITests;
-			productReference = 1B7180D41D5BE8440046BB03 /* ChoiceSceneUITests.xctest */;
+			productReference = 1B7180D41D5BE8440046BB03 /* ChoiScene.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -243,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1B7180B01D5BE8440046BB03 /* Build configuration list for PBXProject "ChoiceScene" */;
+			buildConfigurationList = 1B7180B01D5BE8440046BB03 /* Build configuration list for PBXProject "ChoiScene" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -256,9 +259,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B7180B41D5BE8440046BB03 /* ChoiceScene */,
-				1B7180C81D5BE8440046BB03 /* ChoiceSceneTests */,
-				1B7180D31D5BE8440046BB03 /* ChoiceSceneUITests */,
+				1B7180B41D5BE8440046BB03 /* ChoiScene */,
+				1B7180C81D5BE8440046BB03 /* ChoiSceneTests */,
+				1B7180D31D5BE8440046BB03 /* ChoiSceneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B7181011D5BF7110046BB03 /* ChoiceViewController.swift in Sources */,
 				1B7180BB1D5BE8440046BB03 /* ViewController.swift in Sources */,
 				1B7180B91D5BE8440046BB03 /* AppDelegate.swift in Sources */,
 			);
@@ -323,12 +327,12 @@
 /* Begin PBXTargetDependency section */
 		1B7180CB1D5BE8440046BB03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1B7180B41D5BE8440046BB03 /* ChoiceScene */;
+			target = 1B7180B41D5BE8440046BB03 /* ChoiScene */;
 			targetProxy = 1B7180CA1D5BE8440046BB03 /* PBXContainerItemProxy */;
 		};
 		1B7180D61D5BE8440046BB03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1B7180B41D5BE8440046BB03 /* ChoiceScene */;
+			target = 1B7180B41D5BE8440046BB03 /* ChoiScene */;
 			targetProxy = 1B7180D51D5BE8440046BB03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -448,8 +452,8 @@
 				);
 				INFOPLIST_FILE = ChoiceScene/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AustiNnight.ChoiceScene;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = AustiNnight.ChoiScene;
+				PRODUCT_NAME = ChoiScene;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -466,8 +470,8 @@
 				);
 				INFOPLIST_FILE = ChoiceScene/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AustiNnight.ChoiceScene;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = AustiNnight.ChoiScene;
+				PRODUCT_NAME = ChoiScene;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -479,8 +483,8 @@
 				INFOPLIST_FILE = ChoiceSceneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AustiNnight.ChoiceSceneTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChoiceScene.app/ChoiceScene";
+				PRODUCT_NAME = ChoiScene;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChoiScene.app/ChoiScene";
 			};
 			name = Debug;
 		};
@@ -491,8 +495,8 @@
 				INFOPLIST_FILE = ChoiceSceneTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AustiNnight.ChoiceSceneTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChoiceScene.app/ChoiceScene";
+				PRODUCT_NAME = ChoiScene;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChoiScene.app/ChoiScene";
 			};
 			name = Release;
 		};
@@ -502,7 +506,7 @@
 				INFOPLIST_FILE = ChoiceSceneUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AustiNnight.ChoiceSceneUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ChoiScene;
 				TEST_TARGET_NAME = ChoiceScene;
 			};
 			name = Debug;
@@ -513,7 +517,7 @@
 				INFOPLIST_FILE = ChoiceSceneUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AustiNnight.ChoiceSceneUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ChoiScene;
 				TEST_TARGET_NAME = ChoiceScene;
 			};
 			name = Release;
@@ -521,7 +525,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B7180B01D5BE8440046BB03 /* Build configuration list for PBXProject "ChoiceScene" */ = {
+		1B7180B01D5BE8440046BB03 /* Build configuration list for PBXProject "ChoiScene" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B7180DB1D5BE8440046BB03 /* Debug */,
@@ -530,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B7180DD1D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiceScene" */ = {
+		1B7180DD1D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiScene" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B7180DE1D5BE8440046BB03 /* Debug */,
@@ -538,7 +542,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		1B7180E01D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiceSceneTests" */ = {
+		1B7180E01D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiSceneTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B7180E11D5BE8440046BB03 /* Debug */,
@@ -546,7 +550,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		1B7180E31D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiceSceneUITests" */ = {
+		1B7180E31D5BE8440046BB03 /* Build configuration list for PBXNativeTarget "ChoiSceneUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B7180E41D5BE8440046BB03 /* Debug */,

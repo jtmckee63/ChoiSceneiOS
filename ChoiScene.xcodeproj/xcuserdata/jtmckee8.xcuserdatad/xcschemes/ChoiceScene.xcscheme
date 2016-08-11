@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1B7180B41D5BE8440046BB03"
-               BuildableName = "ChoiceScene.app"
-               BlueprintName = "ChoiceScene"
-               ReferencedContainer = "container:ChoiceScene.xcodeproj">
+               BuildableName = "ChoiScene.app"
+               BlueprintName = "ChoiScene"
+               ReferencedContainer = "container:ChoiScene.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1B7180C81D5BE8440046BB03"
-               BuildableName = "ChoiceSceneTests.xctest"
-               BlueprintName = "ChoiceSceneTests"
-               ReferencedContainer = "container:ChoiceScene.xcodeproj">
+               BuildableName = "ChoiScene.xctest"
+               BlueprintName = "ChoiSceneTests"
+               ReferencedContainer = "container:ChoiScene.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1B7180D31D5BE8440046BB03"
-               BuildableName = "ChoiceSceneUITests.xctest"
-               BlueprintName = "ChoiceSceneUITests"
-               ReferencedContainer = "container:ChoiceScene.xcodeproj">
+               BuildableName = "ChoiScene.xctest"
+               BlueprintName = "ChoiSceneUITests"
+               ReferencedContainer = "container:ChoiScene.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B7180B41D5BE8440046BB03"
-            BuildableName = "ChoiceScene.app"
-            BlueprintName = "ChoiceScene"
-            ReferencedContainer = "container:ChoiceScene.xcodeproj">
+            BuildableName = "ChoiScene.app"
+            BlueprintName = "ChoiScene"
+            ReferencedContainer = "container:ChoiScene.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B7180B41D5BE8440046BB03"
-            BuildableName = "ChoiceScene.app"
-            BlueprintName = "ChoiceScene"
-            ReferencedContainer = "container:ChoiceScene.xcodeproj">
+            BuildableName = "ChoiScene.app"
+            BlueprintName = "ChoiScene"
+            ReferencedContainer = "container:ChoiScene.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B7180B41D5BE8440046BB03"
-            BuildableName = "ChoiceScene.app"
-            BlueprintName = "ChoiceScene"
-            ReferencedContainer = "container:ChoiceScene.xcodeproj">
+            BuildableName = "ChoiScene.app"
+            BlueprintName = "ChoiScene"
+            ReferencedContainer = "container:ChoiScene.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
