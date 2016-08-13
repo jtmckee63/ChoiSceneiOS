@@ -179,7 +179,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IEl-FW-Pyy">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="emf-BO-grq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="emf-BO-grq">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -196,12 +196,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="emf-BO-grq" firstAttribute="top" secondItem="IEl-FW-Pyy" secondAttribute="top" id="0AM-xt-J7K"/>
-                            <constraint firstItem="emf-BO-grq" firstAttribute="top" secondItem="cMN-lq-FmQ" secondAttribute="bottom" id="CSW-W3-HXT"/>
-                            <constraint firstItem="IEl-FW-Pyy" firstAttribute="leading" secondItem="R6O-Ic-bNy" secondAttribute="leading" id="FSf-sX-qiU"/>
-                            <constraint firstAttribute="trailing" secondItem="emf-BO-grq" secondAttribute="trailing" id="LX3-xe-zkf"/>
-                            <constraint firstItem="IEl-FW-Pyy" firstAttribute="bottom" secondItem="0RP-9a-dH8" secondAttribute="top" id="nhi-2L-K1C"/>
-                            <constraint firstItem="IEl-FW-Pyy" firstAttribute="trailing" secondItem="emf-BO-grq" secondAttribute="trailing" id="rr4-2v-aRv"/>
+                            <constraint firstItem="IEl-FW-Pyy" firstAttribute="top" secondItem="cMN-lq-FmQ" secondAttribute="bottom" id="99t-zf-HT2"/>
+                            <constraint firstItem="emf-BO-grq" firstAttribute="top" secondItem="IEl-FW-Pyy" secondAttribute="top" id="9Ts-lW-j12"/>
+                            <constraint firstAttribute="trailing" secondItem="IEl-FW-Pyy" secondAttribute="trailing" id="IFk-1d-WC0"/>
+                            <constraint firstItem="emf-BO-grq" firstAttribute="bottom" secondItem="0RP-9a-dH8" secondAttribute="top" id="Ibg-oS-HTf"/>
+                            <constraint firstItem="IEl-FW-Pyy" firstAttribute="leading" secondItem="emf-BO-grq" secondAttribute="leading" id="JR8-Dm-hTx"/>
+                            <constraint firstItem="IEl-FW-Pyy" firstAttribute="trailing" secondItem="emf-BO-grq" secondAttribute="trailing" id="osi-2n-325"/>
+                            <constraint firstItem="IEl-FW-Pyy" firstAttribute="bottom" secondItem="0RP-9a-dH8" secondAttribute="top" id="ppo-ny-hL9"/>
+                            <constraint firstItem="IEl-FW-Pyy" firstAttribute="leading" secondItem="R6O-Ic-bNy" secondAttribute="leading" id="r8S-hb-tkM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G1Q-9Y-D8r">
