@@ -12,8 +12,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        "Detail"
-
+        title = "Detail"
         // Do any additional setup after loading the view.
     }
 

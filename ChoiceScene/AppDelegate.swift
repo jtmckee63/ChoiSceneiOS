@@ -10,17 +10,15 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Parse
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+    var locationManager = CLLocationManager()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        //        //firebase
-        //        FIRApp.configure()
-        
         //Parse
         Parse.initializeWithConfiguration(ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
             configuration.server = "https://fathomless-inlet-31878.herokuapp.com/parse"
@@ -30,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //FACEBOOK SDK
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
     }
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)

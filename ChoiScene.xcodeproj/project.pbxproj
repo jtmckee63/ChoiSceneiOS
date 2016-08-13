@@ -41,6 +41,11 @@
 		4CD6827F1D5FA8CE006032ED /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD6827E1D5FA8CE006032ED /* ProfileViewController.swift */; };
 		4CD682811D5FA8EE006032ED /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD682801D5FA8EE006032ED /* CameraViewController.swift */; };
 		4CD682831D5FA957006032ED /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD682821D5FA957006032ED /* PostViewController.swift */; };
+		4CD682861D5FB469006032ED /* SceneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD682841D5FB469006032ED /* SceneTableViewCell.swift */; };
+		4CD682871D5FB469006032ED /* SceneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD682851D5FB469006032ED /* SceneTableViewCell.xib */; };
+		4CD6828B1D5FC366006032ED /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD6828A1D5FC366006032ED /* Animations.swift */; };
+		4CD6828E1D5FCD05006032ED /* BTNavigationDropdownMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4CD6828C1D5FCD05006032ED /* BTNavigationDropdownMenu.bundle */; };
+		4CD6828F1D5FCD05006032ED /* BTNavigationDropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD6828D1D5FCD05006032ED /* BTNavigationDropdownMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +106,11 @@
 		4CD6827E1D5FA8CE006032ED /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4CD682801D5FA8EE006032ED /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4CD682821D5FA957006032ED /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		4CD682841D5FB469006032ED /* SceneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneTableViewCell.swift; sourceTree = "<group>"; };
+		4CD682851D5FB469006032ED /* SceneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SceneTableViewCell.xib; sourceTree = "<group>"; };
+		4CD6828A1D5FC366006032ED /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		4CD6828C1D5FCD05006032ED /* BTNavigationDropdownMenu.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BTNavigationDropdownMenu.bundle; sourceTree = "<group>"; };
+		4CD6828D1D5FCD05006032ED /* BTNavigationDropdownMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTNavigationDropdownMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +184,14 @@
 				1B7180B81D5BE8440046BB03 /* AppDelegate.swift */,
 				1B7180BA1D5BE8440046BB03 /* ViewController.swift */,
 				4CD6827A1D5FA611006032ED /* SceneViewController.swift */,
+				4CD6828A1D5FC366006032ED /* Animations.swift */,
+				4CD682841D5FB469006032ED /* SceneTableViewCell.swift */,
 				4CD6827C1D5FA8B3006032ED /* DetailViewController.swift */,
 				4CD6827E1D5FA8CE006032ED /* ProfileViewController.swift */,
 				4CD682801D5FA8EE006032ED /* CameraViewController.swift */,
 				4CD682821D5FA957006032ED /* PostViewController.swift */,
 				1B7180BC1D5BE8440046BB03 /* Main.storyboard */,
+				4CD682851D5FB469006032ED /* SceneTableViewCell.xib */,
 				1B7180BF1D5BE8440046BB03 /* Assets.xcassets */,
 				1B7180C11D5BE8440046BB03 /* LaunchScreen.storyboard */,
 				1B7180C41D5BE8440046BB03 /* Info.plist */,
@@ -208,6 +221,7 @@
 		4CD682611D5FA418006032ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CD682901D5FCD0C006032ED /* 3rd Party API's */,
 				4CD682781D5FA4DD006032ED /* libz.tbd */,
 				4CD682761D5FA4D8006032ED /* libsqlite3.tbd */,
 				4CD682741D5FA4CF006032ED /* MapKit.framework */,
@@ -232,6 +246,15 @@
 				1B7180EF1D5BE8C60046BB03 /* FBSDKShareKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CD682901D5FCD0C006032ED /* 3rd Party API's */ = {
+			isa = PBXGroup;
+			children = (
+				4CD6828C1D5FCD05006032ED /* BTNavigationDropdownMenu.bundle */,
+				4CD6828D1D5FCD05006032ED /* BTNavigationDropdownMenu.swift */,
+			);
+			name = "3rd Party API's";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +365,9 @@
 				1B7180C31D5BE8440046BB03 /* LaunchScreen.storyboard in Resources */,
 				1B7180F31D5BE8C60046BB03 /* FacebookSDKStrings.bundle in Resources */,
 				1B7180C01D5BE8440046BB03 /* Assets.xcassets in Resources */,
+				4CD6828E1D5FCD05006032ED /* BTNavigationDropdownMenu.bundle in Resources */,
 				1B7180BE1D5BE8440046BB03 /* Main.storyboard in Resources */,
+				4CD682871D5FB469006032ED /* SceneTableViewCell.xib in Resources */,
 				1B7180F11D5BE8C60046BB03 /* AccountKitStrings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +397,10 @@
 				4CD6827F1D5FA8CE006032ED /* ProfileViewController.swift in Sources */,
 				4CD6827B1D5FA611006032ED /* SceneViewController.swift in Sources */,
 				4CD6827D1D5FA8B3006032ED /* DetailViewController.swift in Sources */,
+				4CD682861D5FB469006032ED /* SceneTableViewCell.swift in Sources */,
+				4CD6828B1D5FC366006032ED /* Animations.swift in Sources */,
 				4CD682811D5FA8EE006032ED /* CameraViewController.swift in Sources */,
+				4CD6828F1D5FCD05006032ED /* BTNavigationDropdownMenu.swift in Sources */,
 				1B7180BB1D5BE8440046BB03 /* ViewController.swift in Sources */,
 				1B7180B91D5BE8440046BB03 /* AppDelegate.swift in Sources */,
 			);
