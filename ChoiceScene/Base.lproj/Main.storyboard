@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ejy-lu-WmB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -60,7 +60,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coR-oC-efu">
                                 <rect key="frame" x="179" y="20" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -89,21 +89,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-nO-bzy">
-                                <rect key="frame" x="192" y="630" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51Q-Pg-3ng">
+                                <rect key="frame" x="91" y="607" width="82" height="30"/>
+                                <state key="normal" title="Discard"/>
                                 <connections>
-                                    <segue destination="qUb-Gg-fh5" kind="show" id="py6-nt-y9q"/>
+                                    <action selector="discardTouch:" destination="v8j-FW-g5s" eventType="touchUpInside" id="98b-Uu-FtN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYd-Ri-Vjp">
+                                <rect key="frame" x="281" y="607" width="46" height="30"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postTouch:" destination="v8j-FW-g5s" eventType="touchUpInside" id="r3g-14-neJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="VFg-Qf-5RG" firstAttribute="top" secondItem="UgJ-nO-bzy" secondAttribute="bottom" constant="27" id="DqR-MO-sug"/>
-                            <constraint firstItem="UgJ-nO-bzy" firstAttribute="centerX" secondItem="sNc-Vx-kQD" secondAttribute="centerX" id="neh-aN-Aps"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dhC-Vb-Q9h"/>
+                    <connections>
+                        <outlet property="discardButton" destination="51Q-Pg-3ng" id="iWz-wb-lGR"/>
+                        <outlet property="postButton" destination="cYd-Ri-Vjp" id="7Ly-Pt-iLM"/>
+                        <segue destination="qUb-Gg-fh5" kind="show" identifier="showPost" id="Hzb-BU-XGQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ms8-ta-ASD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,9 +128,17 @@
                     <view key="view" contentMode="scaleToFill" id="Erq-w2-SII">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIJ-xt-PqE">
+                                <rect key="frame" x="0.0" y="64" width="414" height="310"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="postImage" destination="mIJ-xt-PqE" id="ote-hl-SvS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNf-WS-KKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,7 +249,7 @@
                                     <constraint firstAttribute="height" constant="35" id="7BF-4m-bcd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -261,7 +277,6 @@
         <!--SCENE-->
         <scene sceneID="jp7-w9-5JD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8sX-0u-CaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aqg-hu-ca6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="SCENE" id="tSE-IB-6mL"/>
                     <toolbarItems/>
@@ -274,6 +289,7 @@
                         <segue destination="hrv-e7-JK0" kind="relationship" relationship="rootViewController" id="1Cq-3c-PMp"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8sX-0u-CaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2401" y="330"/>
         </scene>

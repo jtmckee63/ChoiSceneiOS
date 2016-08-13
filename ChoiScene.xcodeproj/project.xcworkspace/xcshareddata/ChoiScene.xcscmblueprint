@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B01F4C237DE39296A19BF5E5142FB0B5F8C2A823",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "890B543928478214EC07ACDD6E250E87A23C2E06" : 0,
+    "B01F4C237DE39296A19BF5E5142FB0B5F8C2A823" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FAC31E89-5A53-4782-8091-B731D2C59702",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "890B543928478214EC07ACDD6E250E87A23C2E06" : "",
+    "B01F4C237DE39296A19BF5E5142FB0B5F8C2A823" : "ChoiSceneiOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ChoiScene",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ChoiScene.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jtmckee63\/choicesceneIOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "890B543928478214EC07ACDD6E250E87A23C2E06"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jtmckee63\/ChoiSceneiOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B01F4C237DE39296A19BF5E5142FB0B5F8C2A823"
+    }
+  ]
+}

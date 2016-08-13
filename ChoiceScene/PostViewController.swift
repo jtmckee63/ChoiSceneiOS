@@ -10,11 +10,19 @@ import UIKit
 
 class PostViewController: UIViewController {
 
+    @IBOutlet var postImage: UIImageView!
+    
+    var image = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Post"
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        postImage.image = image
     }
 
     override func didReceiveMemoryWarning() {
