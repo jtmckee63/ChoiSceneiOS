@@ -121,6 +121,9 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate, UITable
         
         return true
     }
+    
+    
+    //Logic for Table view -start
     func loadData(className: String, category: Int){
         
         //Remove all posts from Posts
@@ -235,7 +238,8 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate, UITable
             }
         }
     }
-    
+    //Logic for Table view -stop
+
 }
 
 

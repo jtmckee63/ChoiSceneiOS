@@ -5,7 +5,7 @@
 //  Created by joseph mckee on 8/5/16.
 //  Copyright © 2016 AustiNight. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import FBSDKLoginKit
 import FBSDKMessengerShareKit
@@ -14,6 +14,20 @@ import FBNotifications
 import FBAudienceNetwork
 
 import UIKit
+
+extension UIView {
+    func fadeIn(duration: NSTimeInterval = 1.0, delay: NSTimeInterval = 0.5, completion: ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
+        UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.alpha = 1.0
+            }, completion: completion)  }
+    
+    func fadeOut(duration: NSTimeInterval = 1.0, delay: NSTimeInterval = 0.5, completion: (Bool) -> Void = {(finished: Bool) -> Void in}) {
+        UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            self.alpha = 0.0
+            }, completion: completion)
+    }
+}
+
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet var btnFacebook: FBSDKLoginButton!
@@ -23,6 +37,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet var beginButton: UIButton!
     
     let userDefaults = NSUserDefaults.standardUserDefaults()
+    
+    var lightBlue = UIColor(red:0.42, green:0.93, blue:1.00, alpha:1.0)
     
     func configureFacebook()
     {
@@ -43,8 +59,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     {
         let loginManager: FBSDKLoginManager = FBSDKLoginManager()
         loginManager.logOut()
+        self.beginButton.fadeOut()
         self.beginButton.hidden = true
-        ivUserProfileImage.image = UIImage(named: "fb-art.jpg")
+        ivUserProfileImage.fadeOut()
+        ivUserProfileImage.image = UIImage(named: "ChoiScene-Pic.png")
+        ivUserProfileImage.fadeIn()
         lblName.text = "Not Logged In"
     }
     
@@ -52,22 +71,41 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ivUserProfileImage = UIImageView(frame: CGRectMake(0, 0, 100, 100))
-        ivUserProfileImage.center = CGPoint(x: view.center.x, y: 200)
-        ivUserProfileImage.image = UIImage(named: "fb-art.jpg")
+        //user profile pic
+        ivUserProfileImage = UIImageView(frame: CGRectMake(0, 0, 200, 200))
+        ivUserProfileImage.center = CGPoint(x: view.center.x, y: 150)
+        ivUserProfileImage.image = UIImage(named: "ChoiScene-Pic.png")
+        ivUserProfileImage.layer.borderWidth = 3.0
+        self.ivUserProfileImage.layer.borderColor = lightBlue.CGColor
+        self.ivUserProfileImage.layer.cornerRadius = self.ivUserProfileImage.frame.size.width / 2;
+        self.ivUserProfileImage.clipsToBounds = true;
         view.addSubview(ivUserProfileImage)
         
+        //user name
         lblName = UILabel(frame: CGRectMake(0,0,200,30))
         lblName.center = CGPoint(x: view.center.x, y: 300)
-        lblName.text = "Not Logged In"
+        lblName.text = "Please Login"
         lblName.textAlignment = NSTextAlignment.Center
         view.addSubview(lblName)
-        
-        
+
+
+        //begin button
+        let goButtonImage = UIImage(named: "goButton.jpg")
+        self.beginButton.setImage(goButtonImage, forState: .Normal)
+        self.beginButton.layer.cornerRadius = self.beginButton.frame.size.width / 2;
+        self.beginButton.clipsToBounds = true;
+        beginButton.layer.borderWidth = 3.0
+        self.beginButton.layer.borderColor = lightBlue.CGColor
+        //default begin butto hidden until login
+        self.beginButton.fadeOut()
         self.beginButton.hidden = true
         
+        
+        //FB token
         if FBSDKAccessToken.currentAccessToken() != nil {
           self.beginButton.hidden = false
+            self.beginButton.fadeIn()
+            
         }
         
         let btnFacebook = FBSDKLoginButton()
@@ -77,8 +115,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         getFacebookUserInfo()
         
-        self.ivUserProfileImage.layer.cornerRadius = self.ivUserProfileImage.frame.size.width / 2;
-        self.ivUserProfileImage.clipsToBounds = true;
+//        self.ivUserProfileImage.layer.cornerRadius = self.ivUserProfileImage.frame.size.width / 2;
+//        self.ivUserProfileImage.clipsToBounds = true;
         
         
         print ("end of viewDidLoad()")
@@ -107,7 +145,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 //                self.userDefaults.setValue(userName, forKey: "user_name")
                 
                 self.ivUserProfileImage.image = userImage
+                self.ivUserProfileImage.fadeIn()
+                
+                self.beginButton.fadeIn()
                 self.beginButton.hidden = false
+                
+                
             })
         }
     }
@@ -118,9 +161,10 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
-        
+        ivUserProfileImage.fadeIn()
         return true
     }
+    
     
 }
 

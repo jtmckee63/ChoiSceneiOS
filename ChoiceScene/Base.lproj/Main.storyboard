@@ -18,23 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVr-Um-eIo">
-                                <rect key="frame" x="134" y="562" width="146" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="foR-IY-5W7"/>
-                                </constraints>
-                                <state key="normal" title="Begin"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVr-Um-eIo">
+                                <rect key="frame" x="148" y="531" width="118" height="118"/>
                                 <connections>
                                     <segue destination="ejy-lu-WmB" kind="show" id="9R5-VJ-MqA"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WVr-Um-eIo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bta-3k-l4V"/>
-                            <constraint firstItem="WVr-Um-eIo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dul-GL-PYn"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WVr-Um-eIo" secondAttribute="bottom" constant="148" id="rhA-hg-KR1"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2SS-oB-xka"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
