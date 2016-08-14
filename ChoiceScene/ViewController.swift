@@ -77,7 +77,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         getFacebookUserInfo()
         
-        
+        self.ivUserProfileImage.layer.cornerRadius = self.ivUserProfileImage.frame.size.width / 2;
+        self.ivUserProfileImage.clipsToBounds = true;
         
         
         print ("end of viewDidLoad()")

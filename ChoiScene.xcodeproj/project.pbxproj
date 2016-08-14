@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B28E0881D5FF1A500AB6D49 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28E0871D5FF1A500AB6D49 /* Post.swift */; };
 		1B7180B91D5BE8440046BB03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7180B81D5BE8440046BB03 /* AppDelegate.swift */; };
 		1B7180BB1D5BE8440046BB03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7180BA1D5BE8440046BB03 /* ViewController.swift */; };
 		1B7180BE1D5BE8440046BB03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7180BC1D5BE8440046BB03 /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B28E0871D5FF1A500AB6D49 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		1B7180B51D5BE8440046BB03 /* ChoiScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoiScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7180B81D5BE8440046BB03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B7180BA1D5BE8440046BB03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				4CD6827E1D5FA8CE006032ED /* ProfileViewController.swift */,
 				4CD682801D5FA8EE006032ED /* CameraViewController.swift */,
 				4CD682821D5FA957006032ED /* PostViewController.swift */,
+				1B28E0871D5FF1A500AB6D49 /* Post.swift */,
 				1B7180BC1D5BE8440046BB03 /* Main.storyboard */,
 				4CD682851D5FB469006032ED /* SceneTableViewCell.xib */,
 				1B7180BF1D5BE8440046BB03 /* Assets.xcassets */,
@@ -325,7 +328,7 @@
 				TargetAttributes = {
 					1B7180B41D5BE8440046BB03 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 43B8W7K368;
+						DevelopmentTeam = 2WU5ER73VT;
 					};
 					1B7180C81D5BE8440046BB03 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD682831D5FA957006032ED /* PostViewController.swift in Sources */,
+				1B28E0881D5FF1A500AB6D49 /* Post.swift in Sources */,
 				4CD6827F1D5FA8CE006032ED /* ProfileViewController.swift in Sources */,
 				4CD6827B1D5FA611006032ED /* SceneViewController.swift in Sources */,
 				4CD6827D1D5FA8B3006032ED /* DetailViewController.swift in Sources */,
