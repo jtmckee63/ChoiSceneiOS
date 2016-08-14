@@ -74,10 +74,10 @@ class CameraViewController: UIViewController{
         cameraView.layer.zPosition = 2
         tempImageView.layer.zPosition = 2
         
-        discardButton.layer.zPosition = 3
-        postButton.layer.zPosition = 3
+        discardButton.layer.zPosition = 5
+        postButton.layer.zPosition = 5
         
-        // post and discard buttons
+//         post and discard buttons
         self.discardButton.hidden = true
         self.postButton.hidden = true
     }
@@ -95,9 +95,6 @@ class CameraViewController: UIViewController{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        postButton.hidden = true
-        discardButton.hidden = true
         
         captureSession = AVCaptureSession()
         captureSession?.sessionPreset = AVCaptureSessionPreset1920x1080
@@ -196,8 +193,8 @@ class CameraViewController: UIViewController{
         
         if postCheck == true {
             
-            self.discardButton.hidden = true
-            self.postButton.hidden = true
+            //self.discardButton.hidden = true
+            //self.postButton.hidden = true
             
         }
     }

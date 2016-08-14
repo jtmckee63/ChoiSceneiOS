@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -89,22 +90,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51Q-Pg-3ng">
-                                <rect key="frame" x="91" y="607" width="82" height="30"/>
-                                <state key="normal" title="Discard"/>
-                                <connections>
-                                    <action selector="discardTouch:" destination="v8j-FW-g5s" eventType="touchUpInside" id="98b-Uu-FtN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYd-Ri-Vjp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYd-Ri-Vjp">
                                 <rect key="frame" x="281" y="607" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="LrQ-hg-LuC"/>
+                                </constraints>
                                 <state key="normal" title="Post"/>
                                 <connections>
                                     <action selector="postTouch:" destination="v8j-FW-g5s" eventType="touchUpInside" id="r3g-14-neJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51Q-Pg-3ng">
+                                <rect key="frame" x="91" y="607" width="82" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="pcN-cT-hHv"/>
+                                </constraints>
+                                <state key="normal" title="Discard"/>
+                                <connections>
+                                    <action selector="discardTouch:" destination="v8j-FW-g5s" eventType="touchUpInside" id="98b-Uu-FtN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="51Q-Pg-3ng" firstAttribute="baseline" secondItem="cYd-Ri-Vjp" secondAttribute="baseline" id="1yp-Ik-paa"/>
+                            <constraint firstItem="VFg-Qf-5RG" firstAttribute="top" secondItem="51Q-Pg-3ng" secondAttribute="bottom" constant="50" id="YVQ-lz-EOu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cYd-Ri-Vjp" secondAttribute="trailing" constant="67" id="gYl-Za-EZo"/>
+                            <constraint firstItem="51Q-Pg-3ng" firstAttribute="leading" secondItem="sNc-Vx-kQD" secondAttribute="leadingMargin" constant="71" id="iNc-8U-e50"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dhC-Vb-Q9h"/>
                     <connections>
@@ -129,14 +142,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIJ-xt-PqE">
-                                <rect key="frame" x="0.0" y="64" width="414" height="310"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mIJ-xt-PqE">
+                                <rect key="frame" x="0.0" y="64" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="414" id="1SE-2l-10u"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDH-rM-QAb">
+                                <rect key="frame" x="177" y="613" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="KDC-W6-PZ8"/>
+                                    <constraint firstAttribute="height" constant="60" id="iaU-VL-8Kx"/>
+                                </constraints>
+                                <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="postButtonAction:" destination="qUb-Gg-fh5" eventType="touchUpInside" id="vwo-ao-AsU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mIJ-xt-PqE" firstAttribute="centerX" secondItem="rDH-rM-QAb" secondAttribute="centerX" id="El6-dH-4iX"/>
+                            <constraint firstItem="mIJ-xt-PqE" firstAttribute="leading" secondItem="Erq-w2-SII" secondAttribute="leading" id="Lpn-dl-5uo"/>
+                            <constraint firstItem="mIJ-xt-PqE" firstAttribute="top" secondItem="yFx-R1-GFy" secondAttribute="bottom" id="NBa-Zo-vgz"/>
+                            <constraint firstItem="0rh-4M-WCL" firstAttribute="top" secondItem="rDH-rM-QAb" secondAttribute="bottom" constant="14" id="SWf-H1-M3f"/>
+                            <constraint firstAttribute="trailing" secondItem="mIJ-xt-PqE" secondAttribute="trailing" id="gpj-Eh-xLG"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="postButtonOutlet" destination="rDH-rM-QAb" id="aXs-7A-Wne"/>
                         <outlet property="postImage" destination="mIJ-xt-PqE" id="ote-hl-SvS"/>
                     </connections>
                 </viewController>
@@ -207,6 +242,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="G1Q-9Y-D8r">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="txR-yw-brh">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="refreshDataBarButtonAction:" destination="hrv-e7-JK0" id="gFZ-qo-cgL"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="rewind" id="Wzm-nZ-YiJ">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>

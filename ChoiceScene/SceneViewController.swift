@@ -15,21 +15,13 @@ class SceneViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var eatButtonOutlet: UIButton!
-    @IBOutlet var drinkButtonOutlet: UIButton!
-    @IBOutlet var playButtonOutlet: UIButton!
-    
-    @IBAction func eatButtonAction(sender: AnyObject) {
-        
+
+    @IBAction func refreshDataBarButtonAction(sender: AnyObject) {
+        getUserLocationString(){
+            (city, state) in self.loadData(self.createAndTrimClassName(city!, state: state!), category: 0)
+        }
     }
-    
-    @IBAction func drinkButtonAction(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func playButtonAction(sender: AnyObject) {
-        
-    }
+
     @IBAction func toggleTableView(sender: AnyObject) {
         if tableView.alpha > 0.0{
             Animations().fadeOut(tableView, time: 0.2)
@@ -40,6 +32,7 @@ class SceneViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var locationManager = CLLocationManager()
     var menuView: BTNavigationDropdownMenu!
+    var posts:[Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,13 +53,12 @@ class SceneViewController: UIViewController, UITableViewDelegate, UITableViewDat
         menuView.maskBackgroundOpacity = 0.3
         self.navigationItem.titleView = menuView
         
-        
-        
         //Register Nib for TableViewCell
         tableView.registerNib(UINib(nibName: "SceneTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
         //Table View
         tableView.backgroundColor = UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 0.8)
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -86,7 +78,39 @@ class SceneViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func loadData(className: String, category: Int){
-        print(className, category)
+        
+        //Remove all posts from Posts
+        posts.removeAll()
+        
+        let query = PFQuery(className: className)
+        query.findObjectsInBackgroundWithBlock { (queryResults: [PFObject]?, error: NSError?) -> Void in
+            
+            if queryResults?.isEmpty == false{
+                for object in queryResults! {
+                    let post = Post()
+                    post.geoPoint = object["GeoPoint"] as! PFGeoPoint
+                    post.state = object["State"] as! String
+                    post.city = object["City"] as! String
+                    post.address = object["Address"] as! String
+                    post.subAddress = object["SubAddress"] as! String
+                    post.category = object["Category"] as! String
+                    post.postImageData = object["PostImageData"] as! NSData
+                    post.authorImageData = object["AuthorImageData"] as! NSData
+                    post.authorName = object["AuthorName"] as! String
+                    post.category = object["Category"] as! String
+                    
+                    self.posts.append(post)
+                    self.tableView.reloadData()
+                    
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = CLLocationCoordinate2D(latitude: post.geoPoint.latitude, longitude: post.geoPoint.longitude)
+                    self.mapView.addAnnotation(annotation)
+                }
+            }else{
+                self.showAlert("Hmm..", message: "We couldn't find any posts in your area. Start checking in and spread the word about ChoiScene!")
+            }
+        }
+
     }
     
     //MARK: UI Methods
@@ -94,6 +118,7 @@ class SceneViewController: UIViewController, UITableViewDelegate, UITableViewDat
         var index = Int()
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
             index = indexPath
+            print(indexPath)
         }
         return index
     }
@@ -153,13 +178,14 @@ class SceneViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.postAuthorImage.layer.borderColor = UIColor.whiteColor().CGColor
         cell.postAuthorImage.layer.borderWidth = 2.5
         cell.postAuthorImage.clipsToBounds = true
-        cell.postPlaceTitleLabel.text = "Kung fu Saloon"
-        cell.postImage.image = UIImage(named: "kungfu.jpeg")
-        cell.postAuthorImage.image = UIImage(named: "me.jpeg")
+        
+        cell.postPlaceTitleLabel.text = "\(posts[indexPath.row].subAddress), \(posts[indexPath.row].address)"
+        cell.postImage.image = UIImage(data: posts[indexPath.row].postImageData)
+        cell.postAuthorImage.image = UIImage(data: posts[indexPath.row].authorImageData)
         return cell
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return posts.count
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -22,6 +22,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet var beginButton: UIButton!
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    
     func configureFacebook()
     {
         btnFacebook.readPermissions = ["public_profile", "email", "user_friends"];
@@ -90,12 +92,20 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "id, name, email"])
             graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
                 
-                self.lblName.text = result.valueForKey("name") as? String
+                let userName = result.valueForKey("name") as? String
+                self.lblName.text = userName
                 
                 let FBid = result.valueForKey("id") as? String
                 
                 let url = NSURL(string: "https://graph.facebook.com/\(FBid!)/picture?type=large&return_ssl_resources=1")
-                self.ivUserProfileImage.image = UIImage(data: NSData(contentsOfURL: url!)!)
+                let userImage = UIImage(data: NSData(contentsOfURL: url!)!)
+                
+//                //Save user image to k/v pair
+//                self.userDefaults.setValue(userImage, forKey: "user_image")
+//                //Save UserName to k/v pair
+//                self.userDefaults.setValue(userName, forKey: "user_name")
+                
+                self.ivUserProfileImage.image = userImage
                 self.beginButton.hidden = false
             })
         }
